@@ -1,0 +1,885 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+ 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary:  #ffcc55;
+  --secondary: #00245f;
+}
+ 
+::selection {
+  background-color: var(--primary);
+  color: #00245f;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+ 
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* overflow-x: hidden; */
+}
+
+/* main{
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+/* Header Section */
+
+header nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: transparent;
+
+  padding-inline: 40px;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+nav.sticky{
+  background-color: white;
+  box-shadow: 0 1px 15px 0px rgba(0, 0, 0, 0.2);
+  transition: all;
+  transition-duration: 300ms;
+}
+
+header .navbar{
+  display: flex;
+  /* max-width: 1200px; */
+  padding: 5px;
+  margin: auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header .navbar .logo img{
+  width: 160px;
+}
+
+header .navbar ul{
+  display: flex;
+  gap: 1.5rem;
+}
+
+header .navbar li {
+  list-style-type: none;
+}
+
+header .navbar li a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 6px 0;
+  transition: all;
+  transition-duration: 300ms;
+  border: 2px solid transparent;
+}
+
+header .navbar li a:hover{
+  font-weight: 700;
+  color: white;
+  border-bottom: 2px solid white;
+
+}
+
+header .sticky li a{
+  color: var(--secondary);
+}
+
+header .sticky li a:hover{
+  font-weight: 700;
+  color: var(--secondary);
+  border-bottom: 2px solid var(--secondary);
+}
+
+header .cart i{
+  color: white;
+  font-size: 1.7rem;
+  transition: all;
+  transition-duration: 300ms;
+  border-radius: 100%;
+}
+
+header .sticky .cart i{
+  color: var(--secondary);
+}
+
+header .cart i:hover{
+  background-color: white;
+  color: var(--primary);
+  padding: 3px;
+  font-size: 1.7rem;
+  border-radius: 6px;
+}
+
+header .sticky .cart i:hover{
+  background-color: var(--primary);
+  color: white;
+}
+
+
+header .menu-bar i{
+  display: none;
+  color: white;
+  font-size: 1.7rem;
+  transition: all;
+  transition-duration: 300ms;
+  border-radius: 100%;
+}
+
+header .sticky .menu-bar i{
+  color: var(--secondary);
+}
+
+header .sticky .menu-bar i:hover{
+  background-color: var(--primary);
+  color: white;
+}
+
+header .menu-bar i:hover{
+  background-color: white;
+  color: var(--primary);
+  padding: 3px;
+  font-size: 1.7rem;
+  border-radius: 6px;
+}
+
+header .icon-bar {
+  display: flex;
+  gap: 0.2rem;
+  justify-content: end;
+  align-items: center;
+}
+
+/* Home Section */
+
+main #home{
+  position: relative;
+  background-color: #ffcc55; 
+  color: white;
+  background-image: url('../images/bg-01.png');
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  /* margin-inline: auto; */
+  width: 100%;
+  height: 768px;
+  
+
+}
+
+
+main #home ::selection {
+  background-color: white;
+  color: #00245f;
+}
+
+main #home .home-area{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: auto;
+  padding-inline: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  max-width: 1080px;
+}
+
+main .home-area h1{
+  font-size: 40px;
+  margin-block: 10px;
+}
+
+main .home-area p{
+  font-size: 22px;
+
+  max-width: 500px;
+  margin-top: 5px;
+}
+
+main .home-area span{
+  background-color: white;
+  color: var(--primary);
+  padding: 1px 10px;
+  border-radius: 6px;
+}
+
+main .home-area img{
+  width: auto;
+  max-width: 400px;
+  
+}
+
+main .home-area button{
+  background-color: white;
+  color: #ffcc55;
+  font-size: 1.1em;
+  border: 2px solid white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: .3s ease;
+}
+
+main .home-area button:hover{
+  transform: scale(1.06);
+  -webkit-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+
+  box-shadow: 1px 1px 10px 5px rgba(255, 255, 255, 0.3);
+}
+
+main .home-area .price:hover{
+  background-color: white;
+  color: var(--primary);
+}
+
+main .home-area .price{
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+
+}
+
+main .btn-container{
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* About section */
+
+main #about{
+  color: black;
+  display: flex;
+  margin-inline: auto;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+
+  background-image: url('../images/wave-01.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  align-items: center;
+  align-content: center;
+}
+
+
+main #about .about{
+  padding-inline: 50px;
+}
+
+main #about .judul{
+  text-align: center;
+  font-size: 36px;
+}
+
+main #about p{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+
+  max-width: 720px;
+}
+
+/* Menu Section*/
+
+main #menu{
+  flex-direction: column;
+  display: flex;
+  margin-inline: auto;
+  justify-content: center;
+
+  width: 100%;
+  height: max-content;
+
+  padding: 60px;
+}
+
+main #menu .judul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: auto;
+
+  margin-bottom: 50px;
+  
+}
+
+main #menu .judul h2{
+  font-size: 36px;
+  margin: 0;
+  padding: 4px 10px;
+  border-bottom: 2.8px solid var(--primary);
+}
+
+
+main #menu .judul button{
+  background-color: transparent;
+  font-size: 14px;
+  color: black;
+  border: 2px solid black;
+  padding: 5px 20px;
+  border-radius: 10px;
+  transition: .3s ease;
+
+}
+
+main #menu .judul button:hover{
+  background-color: var(--secondary);
+  font-size: 14px;
+  color: white;
+  border: 2px solid var(--secondary);
+  padding: 5px 20px;
+  border-radius: 10px;
+
+  transform: scale(1.06);
+  -webkit-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+
+}
+
+main #menu .box-menu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+main #menu .box-menu .menu-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 40px;
+  border-radius: 10px;
+  
+  max-width: 350px;
+  transition: .3s ease;
+}
+
+main #menu .box-menu .menu-card:hover{
+  background-color: var(--secondary);
+  box-shadow: 1px 1px 5px 2px #00245f93;
+
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+
+}
+
+main #menu .box-menu .menu-card img{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+
+  border-radius: 100%;
+}
+
+main #menu .menu-card h3{
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  margin-block: 10px;
+}
+
+main #menu .menu-card p{
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+/* Liputan Section*/
+
+main #liputan{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  height: max-content;
+  padding-block: 30px;
+
+  background-color: rgba(0, 0, 0, 0.025);
+}
+
+main .logo-liputan{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 10px;
+  padding: 20px;
+  width: 100%;
+}
+main .logo-liputan img{
+  width: 200px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 13px;
+  border-radius: 6px;
+}
+
+main #liputan .judul{
+  text-align: center;
+  max-width: 720px;
+  padding-inline: 50px;
+}
+
+main #liputan .judul h2{
+  font-size: 30px;
+}
+
+main #liputan .judul p{
+  font-size: 20px;
+}
+
+/* Alamat Section */
+main #alamat{
+  margin-inline: 20px;
+  
+}
+
+main .alamat-container{
+  display: flex;
+  gap: 2rem;
+  /* flex-wrap: wrap; */
+  background-color: white;
+  box-shadow: 1px 1px 50px 1px rgba(0, 0, 0, 0.1);
+  max-width: 1080px;
+  width: auto;
+  margin: auto;
+  border-radius: 8px;
+  padding: 30px;
+  margin-block: 100px;
+}
+
+main #alamat .map iframe{
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+}
+
+main #alamat .map{
+  width: 100%;
+  height: auto;
+  flex: 50%;
+}
+
+main #alamat .alamat{
+  width: 100%;
+  height: auto;
+  flex: 50%;
+}
+
+main #alamat .alamat h2{
+  font-size: 28px;
+  margin: 0;
+  text-align: start;
+}
+
+main #alamat .alamat h4{
+  font-size: 18px;
+  margin: 0;
+  margin-top: 24px;
+
+  padding-left: 6px;
+  border-left: 3px solid var(--primary);
+}
+
+main #alamat .alamat p{
+  font-size: 16px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+/* Contact Section */
+
+main #contact{
+  background-color: var(--primary);
+  width: 100%;
+}
+
+main #contact .contact{
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 1080px;
+  width: auto;
+  margin: auto;
+  padding: 30px;
+  margin-top: 350px;
+}
+
+main #contact .contact-info{
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 480px;
+  margin-top: -250px;
+  box-shadow: 1px 1px 50px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Meet Owner Section */
+
+main #contact .contact-info .profile{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+main #contact .contact-info .judul{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main #contact .contact-info .judul h2{
+  font-size: 30px;
+  color: black;
+  margin-top: 0;
+}
+main #contact .contact-info img{
+  display: flex;
+  width: 140px;
+  border-radius: 100%;
+}
+
+main #contact .contact-info .keterangan{
+  margin-block: 30px;
+  padding-inline: 20px;
+}
+
+main #contact .contact-info .keterangan div{
+  margin-block: 10px;
+  padding-inline: 20px;
+}
+
+main #contact .contact-info h4{
+  font-size: 20px;
+  margin: 0;
+  padding-left: 3px;
+  border-left: 3px solid var(--primary);
+}
+main #contact .contact-info p{
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Footer */
+
+footer ::selection {
+  background-color: white;
+  color: #00245f;
+}
+
+/* Contact Form */
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--primary);
+  padding-block: 50px;
+}
+
+footer form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 100%;
+  max-width: 360px;
+  margin-inline: 20px;
+}
+
+footer .form-container{
+  display: flex;
+  justify-content: center;
+}
+
+footer .contact-form h2 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+footer .contact-form .input-form {
+  width: 100%;
+  border: 2px solid rgb(255, 255, 255);
+  color: white;
+  font-size: 16px;
+  background-color: transparent;
+  outline: none;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+footer .contact-form .input-form::placeholder {
+  color: white;
+  font-size: 16px;
+}
+
+footer .contact-form textarea {
+  font-family: 'Quicksand', sans-serif;
+  width: 100%;
+  border: 2px solid rgb(255, 255, 255);
+  color: white;
+  font-size: 16px;
+  background-color: transparent;
+  outline: none;
+  margin-bottom: 15px;
+  height: 100px;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+footer .contact-form textarea::placeholder {
+  color: white;
+  font-size: 16px;
+}
+
+footer .submit-btn {
+  width: 100%;
+  color: var(--primary);
+  font-size: 16px;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: white;
+  outline: none;
+  margin-bottom: 20px;
+  margin-inline: 20px;
+  padding: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+footer .submit-btn:hover {
+  border-radius: 25px;
+  transform: scale(1.06);
+  -webkit-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+}
+
+footer .right{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+
+  margin-top: 30px;
+  margin-bottom: -20px;
+}
+
+footer .right p{
+  font-size: 1em;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+}
+
+
+/* Mobile Responsive */
+
+
+@media screen and (max-width:768px){
+
+  /* Header Section */
+  header .navbar{
+    justify-content: space-between;
+    padding: 13px;
+  }
+
+  header .navbar ul{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 80%;
+    gap: 0;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    color: var(--secondary);
+    background-color: white;
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 1s;
+  }
+
+  header .navbar li a{
+    font-size: 20px;
+
+  }
+  header .navbar li a:hover{
+    padding: 10px 30px;
+    border: 2px solid var(--secondary);
+    border-radius: 25px;
+  }
+  header .navbar li a:active{
+    background-color: var(--secondary);
+    color: white;
+  }
+
+  header .navbar ul.slide{
+    transform: translateX(0);
+  }
+
+  header .navbar ul li a{
+    color: var(--secondary);
+  }
+
+  header .menu-bar i{
+    display: flex;
+  }
+
+  /* Home Section */
+
+  main #home{
+    width: 100%;
+    height: max-content;
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  
+  main #home .home-area{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding-inline: 20px;
+
+  }
+  main .home-area .judul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .home-area img{
+    max-width: 320px;
+    width: auto;
+  }
+
+  main .home-area img:hover .logo{
+    max-width: 450px;
+    width: auto;
+  }
+
+  main .home-area h1{
+    font-size: 30px;
+    margin-block: 10px;
+  }
+
+  
+  
+  main .home-area p{
+    font-size: 18px;
+    text-align: center;
+  
+    max-width: 500px;
+    margin-top: 5px;
+  }
+
+  /* About Section */
+
+  main #about .about{
+    padding-inline: 20px;
+  }
+
+  main #about .judul{
+    font-size: 30px;
+    margin-block: 15px;
+  }
+
+  main #about p{
+    font-size: 18px;
+  }
+
+  /* Menu Section */
+
+  main #menu{
+    padding-inline: 10px;
+  }
+
+  main #menu .judul h2{
+    font-size: 30px;
+  }
+
+  main #menu .menu-card h3{
+    font-size: 24px;
+  }
+
+  /* Liputan */
+  main #liputan .judul p{
+    font-size: 18px;
+  }
+
+  main #liputan .judul{
+    padding-inline: 20px;
+  }
+
+  main .logo-liputan{
+    padding: 10px;
+  }
+
+  /* Alamat Section */
+
+  main .alamat-container{
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  main #alamat .alamat {
+    width: 100%;
+  }
+
+  /* Meet Owner Section */
+
+  main #contact .contact-info .keterangan{
+    margin-block: 40px;
+    padding-inline:0;
+  }
+  
+}
+
+@media screen and (max-width:360px){
+  header .navbar ul{
+    width: 100%;
+  }
+}
