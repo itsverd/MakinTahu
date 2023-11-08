@@ -695,6 +695,7 @@ footer .submit-btn:hover {
 
 footer .right{
   margin: 0;
+  margin-inline: 20px;
   display: flex;
   justify-content: center;
 
