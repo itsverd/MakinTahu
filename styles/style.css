@@ -572,6 +572,7 @@ main #contact .contact-info .judul h2{
 main #contact .contact-info img{
   display: flex;
   width: 140px;
+  border: solid 1px black;
   border-radius: 100%;
 }
 
